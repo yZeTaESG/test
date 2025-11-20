@@ -1,0 +1,939 @@
+@import"https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";:root {
+    --menu-color: 255, 136, 0;
+}
+
+.Desc {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 4vw;
+    transform: translate(-50%);
+    width: auto;
+    height: 1.3021vw;
+    background-color: #000c;
+    border-radius: .2604vw;
+    padding: 14px;
+    font-family: Inter;
+    font-weight: 180;
+    font-size: .651vw;
+    color: #fff;
+    justify-content: center;
+    align-items: center
+}
+
+.Desc span {
+    margin-bottom: .0521vw
+}
+
+.PWrapper {
+    position: absolute;
+    display: flex;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Inter
+}
+
+.PWrapper .PElements {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw
+}
+
+.PWrapper .PElements .PScroll {
+    position: absolute;
+    display: flex;
+    left: -.8vw;
+    width: .5208vw;
+    height: 100%;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .1042vw;
+    border-radius: .1042vw
+}
+
+.PWrapper .PElements .PScroll i {
+    font-size: .5208vw;
+    color: #fff
+}
+
+.PWrapper .PElements .PScroll .PSProgressWrapper {
+    position: relative;
+    display: flex;
+    width: .2083vw;
+    height: 93%;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.PWrapper .PElements .PScroll .PSProgress {
+    position: relative;
+    display: flex;
+    width: .2083vw;
+    margin-top: .1302vw;
+    background-color: rgb(var(--menu-color));
+    box-shadow: 0 0 .1042vw .0521vw rgba(var(--menu-color),1);
+    transition: top .25s ease,height .25s ease
+}
+
+.PWrapper .PElements .PRightElements {
+    position: relative;
+    display: flex;
+    width: 19.0104vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.PWrapper .PBanner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5.4688vw;
+    justify-content: center;
+    align-items: center;
+    border: .0521vw solid black;
+    border-top-left-radius: .4167vw;
+    border-top-right-radius: .4167vw;
+    overflow: hidden
+}
+
+.PWrapper .PBanner img {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%
+}
+
+.PWrapper .PCategories {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1.5625vw;
+    margin-bottom: .2604vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #000;
+    border-left: .0521vw solid black;
+    border-right: .0521vw solid black;
+    border-bottom: .0521vw solid black;
+    border-bottom-left-radius: .3125vw;
+    border-bottom-right-radius: .3125vw;
+    overflow: hidden
+}
+
+.PWrapper .PCategories .PCategory {
+    position: relative;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: .65vw;
+    font-weight: 300;
+    color: #fff;
+    border-bottom-left-radius: .3125vw;
+    border-bottom-right-radius: .3125vw
+}
+
+.PWrapper .PCategories .PCategory.active {
+    background: linear-gradient(0deg,rgba(var(--menu-color),10) 0%,rgba(var(--menu-color),.1) 100%)
+}
+
+.PWrapper .PCategories .PCategory:only-child {
+    position: absolute;
+    display: flex;
+    left: 0vw;
+    font-size: .625vw;
+    padding: 0 .8vw;
+    justify-content: flex-start
+}
+
+.PWrapper .PCategories .PCategory:last-child {
+    border-right: none
+}
+
+.PWrapper .PTabs {
+    position: relative;
+    display: flex;
+    width: 19.0104vw;
+    height: auto;
+    max-height: 14.0625vw;
+    padding-bottom: .0521vw;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0009;
+    border-radius: .3125vw;
+    overflow-y: hidden
+}
+
+.PWrapper .PTabs .PTab {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1.5625vw;
+    min-height: 1.5625vw;
+    max-height: 1.5625vw;
+    justify-content: center;
+    align-items: center
+}
+
+.PWrapper .PTabs .PTab .PTLabel {
+    position: absolute;
+    display: block;
+    left: .5vw;
+    width: 60%;
+    height: 60%;
+    font-size: .625vw;
+    font-weight: 300;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center
+}
+
+.PWrapper .PTabs .PTab .PTDLabel {
+    position: absolute;
+    display: flex;
+    left: .5vw;
+    font-size: .625vw;
+    color: #fff
+}
+
+.PWrapper .PTabs .PTab i {
+    position: absolute;
+    display: flex;
+    right: .65vw;
+    font-size: .625vw;
+    color: #fff
+}
+
+.PWrapper .PTabs .PTab .TOptions {
+    position: absolute;
+    display: flex;
+    right: .65vw;
+    width: 7.8125vw;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: .5208vw
+}
+
+.PWrapper .PTabs .PTab .TOptions .Scrollable {
+    position: relative;
+    display: flex;
+    right: .15vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw;
+    font-size: .625vw;
+    font-weight: 250;
+    color: #fff
+}
+
+.PWrapper .PTabs .PTab .TOptions .Checkbox {
+    position: relative;
+    display: flex;
+    right: 0vw;
+    width: 1.5625vw;
+    height: .7813vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 5vw
+}
+
+.PWrapper .PTabs .PTab .TOptions .Checkbox.Checked {
+    background: rgb(var(--menu-color))
+}
+
+.PWrapper .PTabs .PTab .TOptions .Checkbox.Checked .Inside {
+    left: .95vw
+}
+
+.PWrapper .PTabs .PTab .TOptions .Checkbox .Inside {
+    position: absolute;
+    display: flex;
+    left: .15vw;
+    margin-bottom: .065vw;
+    width: .4167vw;
+    height: .4167vw;
+    background-color: #fff;
+    border-radius: .2604vw;
+    transition: .25s all
+}
+
+.PWrapper .PTabs .PTab .TOptions .Slider {
+    position: relative;
+    display: flex;
+    right: .15vw;
+    width: 2.3438vw;
+    height: .2083vw;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: .2604vw
+}
+
+.PWrapper .PTabs .PTab .TOptions .Slider .Progress {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    border-radius: .2604vw
+}
+
+.PWrapper .PTabs .PTab .TOptions .Slider .Progress .Thumb {
+    position: absolute;
+    display: flex;
+    right: 0vw;
+    width: .4167vw;
+    height: .4167vw;
+    background-color: #fff;
+    border-radius: .5208vw
+}
+
+.PWrapper .PTabs .PTab .Checkbox {
+    position: absolute;
+    display: flex;
+    right: .65vw;
+    width: 1.5625vw;
+    height: .7813vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 5vw
+}
+
+.PWrapper .PTabs .PTab .Checkbox.Checked {
+    background: rgb(var(--menu-color))
+}
+
+.PWrapper .PTabs .PTab .Checkbox.Checked .Inside {
+    left: .95vw
+}
+
+.PWrapper .PTabs .PTab .Checkbox .Inside {
+    position: absolute;
+    display: flex;
+    left: .15vw;
+    margin-bottom: .065vw;
+    width: .4167vw;
+    height: .4167vw;
+    background-color: #fff;
+    border-radius: .2604vw;
+    transition: .25s all
+}
+
+.PWrapper .PTabs .PTab .Slider {
+    position: absolute;
+    display: flex;
+    right: .65vw;
+    width: 2.3438vw;
+    height: .2083vw;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: .2604vw
+}
+
+.PWrapper .PTabs .PTab .Slider .Progress {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(225,225,225);
+    border-radius: .2604vw
+}
+
+.PWrapper .PTabs .PTab .Slider .Progress .Thumb {
+    position: absolute;
+    display: flex;
+    right: 0vw;
+    width: .4167vw;
+    height: .4167vw;
+    background-color: #e1e1e1;
+    border-radius: .5208vw
+}
+
+.PWrapper .PTabs .PTab .Scrollable {
+    position: absolute;
+    display: flex;
+    right: .65vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw;
+    font-size: .625vw;
+    font-weight: 250;
+    color: #fff
+}
+
+.PWrapper .PTabs .PTab .Divider {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw
+}
+
+.PWrapper .PTabs .PTab .Divider .Left,.PWrapper .PTabs .PTab .Divider .Right {
+    position: relative;
+    display: flex;
+    width: 15%;
+    height: .2083vw;
+    background-color: #e1e1e1;
+    border-radius: 5vw;
+    min-width: 0
+}
+
+.PWrapper .PTabs .PTab .Divider .Label {
+    position: relative;
+    display: flex;
+    font-size: .625vw;
+    font-weight: 300;
+    color: #e1e1e1;
+    white-space: nowrap;
+    padding: 0 .5vw
+}
+
+.PWrapper .Metadata {
+    position: absolute;
+    display: flex;
+    width: 13.8021vw;
+    right: -14.25vw;
+    top: -5.45vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .2083vw;
+    background-color: #0f0f0fe6;
+    border-radius: .2604vw;
+    padding: .5208vw
+}
+
+.PWrapper .Metadata .Title {
+    position: relative;
+    display: flex;
+    width: 98%;
+    height: .7813vw;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fffc
+}
+
+.PWrapper .Metadata .Title span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 350;
+    font-size: .625vw;
+    line-height: .7813vw;
+    text-align: center
+}
+
+.PWrapper .Metadata .Line {
+    position: relative;
+    display: flex;
+    width: 98%;
+    height: .013vw;
+    margin-top: .2083vw;
+    background-color: #ffffff40
+}
+
+.PWrapper .Metadata .Values {
+    position: relative;
+    display: flex;
+    width: 98%;
+    margin-top: .3125vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .2604vw
+}
+
+.PWrapper .Metadata .Values .Value {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.PWrapper .Metadata .Values .Value .Key {
+    position: relative;
+    display: flex;
+    height: .7813vw;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 250;
+    font-size: .625vw;
+    line-height: .7813vw;
+    align-items: center;
+    color: #fff
+}
+
+.PWrapper .Metadata .Values .Value .Val {
+    position: absolute;
+    display: flex;
+    right: 0vw;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw
+}
+
+.PWrapper .Metadata .Values .Value .Val span {
+    height: .7813vw;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 250;
+    font-size: .625vw;
+    line-height: .7813vw;
+    align-items: center;
+    color: #fff
+}
+
+.PWrapper .Metadata .Values .Value .Val .Status {
+    position: relative;
+    display: flex;
+    width: .2604vw;
+    height: .7813vw;
+    background-color: #000;
+    border-radius: .0781vw;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden
+}
+
+.PWrapper .Metadata .Values .Value .Val .Status .Progress {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 0vw;
+    transition: .25s height
+}
+
+.PWrapper .PFooter {
+    position: relative;
+    display: flex;
+    width: 19.0104vw;
+    height: 1.5625vw;
+    margin-top: .2083vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: .3125vw
+}
+
+.PWrapper .PFooter img {
+    position: absolute;
+    display: flex;
+    left: .3vw;
+    width: 1.0417vw
+}
+
+.PWrapper .PFooter .PBuild {
+    position: absolute;
+    display: flex;
+    left: .5vw;
+    font-size: .625vw;
+    font-weight: 250;
+    color: #fff
+}
+
+.PWrapper .PFooter .PIndicator {
+    position: absolute;
+    display: flex;
+    right: .5vw;
+    font-size: .625vw;
+    font-weight: 250;
+    color: #fff
+}
+
+.NotificationsWrapper {
+    position: fixed;
+    bottom: 0vw;
+    right: 0vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5208vw;
+    z-index: 9999;
+    pointer-events: none
+}
+
+.Notification {
+    background-color: #000000e6;
+    padding: .5208vw;
+    width: 18.2292vw;
+    min-width: 18.2292vw;
+    display: flex;
+    flex-direction: row;
+    gap: .5vw;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    font-family: Inter;
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(1.5vw) translate(120%);
+    transition: opacity .2s ease,transform 1.25s ease
+}
+
+.Notification.enter {
+    opacity: 1;
+    transform: translateY(0) translate(0)
+}
+
+.Notification.exit {
+    opacity: 0;
+    transform: translateY(1.5vw) translate(20%)
+}
+
+.Notification i {
+    margin-left: .5vw;
+    font-size: 1.25vw;
+    flex-shrink: 0
+}
+
+.Notification .NotificationBorder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .35vw;
+    height: 100%
+}
+
+.Notification .NotificationContent {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    flex: 1;
+    min-width: 0
+}
+
+.Notification .NotificationTitle {
+    font-size: .7292vw;
+    font-weight: 700
+}
+
+.Notification .NotificationDesc {
+    font-size: .625vw;
+    word-wrap: break-word;
+    color: #aaa
+}
+
+.Notification .NotificationProgress {
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .2vw;
+    background-color: #278cff;
+    animation-name: progress;
+    animation-timing-function: linear
+}
+
+@keyframes progress {
+    0% {
+        width: 100%
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+.Overlay {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #0009
+}
+
+.InputWrapper {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 8vw;
+    width: 26.0417vw;
+    height: auto;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0a0a0a;
+    font-family: Inter;
+    border-radius: .2604vw;
+    overflow: hidden
+}
+
+.InputWrapper .Header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1.3021vw;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw;
+    border-bottom: .0521vw solid rgb(var(--menu-color));
+    font-size: .625vw;
+    font-weight: 230;
+    color: #fff
+}
+
+.InputWrapper .Header img {
+    width: 1.4583vw;
+    height: 1.25vw;
+    margin-left: .3vw;
+    margin-right: -.25vw
+}
+
+.InputWrapper .Header .Line {
+    width: .0521vw;
+    height: .7813vw;
+    background-color: #ffffff40
+}
+
+.InputWrapper .Header i {
+    margin-left: .5vw
+}
+
+.InputWrapper .Body {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1.8229vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .2604vw;
+    background-color: #0f0f0f;
+    font-size: .625vw;
+    font-weight: 230;
+    color: #fff
+}
+
+.InputWrapper .Body .InsideCon {
+    position: absolute;
+    display: flex;
+    width: 98.25%;
+    height: 72%;
+    margin-bottom: .0521vw;
+    background-color: #191919;
+    border-radius: .1042vw;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.InputWrapper .Body span {
+    position: absolute;
+    display: flex;
+    left: .45vw
+}
+
+.InputWrapper .Body .InsideCon span:after {
+    content: "";
+    display: inline-block;
+    width: .0521vw;
+    height: .6vw;
+    background-color: #fff;
+    margin-left: .1vw;
+    margin-bottom: .0521vw;
+    animation: blink 1s steps(2,start) infinite;
+    align-self: center
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden
+    }
+}
+
+.KBLWrapper {
+    position: absolute;
+    display: flex;
+    right: 1.0417vw;
+    top: 1.0417vw;
+    width: 7.0313vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Inter;
+    border-radius: .1563vw;
+    overflow: hidden
+}
+
+.KBLWrapper .Header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1.0417vw;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000c;
+    border-bottom: .0521vw solid rgb(var(--menu-color))
+}
+
+.KBLWrapper .Header .Icon {
+    margin-left: .25vw;
+    color: rgb(var(--menu-color))
+}
+
+.KBLWrapper .Header span {
+    margin-left: .1042vw;
+    font-size: .5208vw;
+    font-weight: 350;
+    color: #fff
+}
+
+.KBLWrapper .Keybinds {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .2083vw;
+    background-color: #00000080;
+    padding: .1042vw
+}
+
+.KBLWrapper .Keybinds .Keybind {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: .7813vw;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.KBLWrapper .Keybinds .Keybind .Label {
+    position: absolute;
+    display: flex;
+    left: .25vw;
+    font-size: .5208vw;
+    font-weight: 350;
+    color: #fff
+}
+
+.KBLWrapper .Keybinds .Keybind .Elements {
+    position: absolute;
+    display: flex;
+    right: .25vw;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: .1042vw
+}
+
+.KBLWrapper .Keybinds .Keybind .Elements span {
+    font-size: .5208vw;
+    font-weight: 350;
+    color: #fff
+}
+
+.Crosshair {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    width: 1.25vw;
+    transform: translate(-50%,-50%);
+    color: #fff
+}
+
+.FCWrapper {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 4vw;
+    max-height: 13.0208vw;
+    transform: translate(-50%);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: Inter;
+    gap: .2083vw;
+    overflow: hidden
+}
+
+.FCWrapper .Option {
+    position: relative;
+    display: flex;
+    font-size: .625vw;
+    font-weight: 300;
+    color: #ffffff4d
+}
+
+.FCWrapper .Option.Selected {
+    color: #fff;
+    font-weight: 300;
+    text-shadow: -.0781vw -.0781vw 0 #000000,.0781vw -.0781vw 0 #000000,-.0781vw .0781vw 0 #000000,.0781vw .0781vw 0 #000000
+}
+
+html {
+    color-scheme: normal!important
+}
+
+body {
+    background: none!important;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden!important
+}
+
+p {
+    margin: 0
+}
+
+#root {
+    height: 100%
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0
+}
